@@ -1,23 +1,23 @@
 @use "./fonts.scss" as f;
 @use "./colors.scss" as c;
 
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-::selection{
-  color: c.$white;
-  background: c.$black;
+::selection {
+	color: c.$white;
+	background: c.$black;
 }
 
-.container{
-  width: 100%;
-  padding-inline: 1rem;
-  margin-inline: auto;
+.container {
+	width: 100%;
+	padding-inline: 1rem;
+	margin-inline: auto;
 }
-a{
-  text-decoration: none;
-  color: c.$black;
+a {
+	text-decoration: none;
+	color: c.$black;
 }

@@ -2,94 +2,94 @@
 @use "./fonts.scss" as f;
 @use "./colors.scss" as c;
 
-.split_char{
-  overflow: hidden;
+.split_char {
+	overflow: hidden;
 }
-.split_word{
-  overflow: hidden;
-}
-
-.content_wrapper{
-  width: 100%;
+.split_word {
+	overflow: hidden;
 }
 
-.hero_wrapper{
-  width: 100%;
-  height: 100vh;
-  background-image: url(../img/heroBG2.jpg);
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: 1rem white solid;
-}
-.no_scroll{
-  overflow: hidden;
-}
-.work_wrapper{
-  width: 100%;
+.content_wrapper {
+	width: 100%;
 }
 
-.work_content{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
+.hero_wrapper {
+	width: 100%;
+	height: 100vh;
+	background-image: url(../img/heroBG2.jpg);
+	background-position: top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 1rem white solid;
+}
+.no_scroll {
+	overflow: hidden;
+}
+.work_wrapper {
+	width: 100%;
 }
 
-.project{
-  width: 100%;
-  padding-block: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.project_tittle{
-  margin-bottom: 1rem;
-}
-.project_subtext{
-  margin-bottom: 6rem;
-}
-.project_open{
-  background-color: c.$black;
-  color: c.$white;
-  padding-inline: 2rem;
-  padding-block: 1rem;
-  cursor: pointer;
-  transition:0.3s border-radius ease,0.5s background-color ease;
-}
-.project_open:hover{
-  background-color: c.$red;
-  border-radius: 0.4rem;
+.work_content {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
 }
 
-.project_open_wrapper{
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow-y: scroll;
-  padding-inline: 1rem;
-  z-index: 2;
-  background-color: c.$black;
-  width: 100%;
-  height: 100vh;
-  pointer-events: all;
-  visibility: hidden;
-  img{
-    width: 100%;
-    object-fit: contain;
-  }
+.project {
+	width: 100%;
+	padding-block: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
-.close_button{
-  position: fixed;
-  z-index: 3;
-  right: 1rem;
-  top: 1rem;
-  background-color: c.$red;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 2rem;
-  cursor: pointer;
+.project_tittle {
+	margin-bottom: 1rem;
+}
+.project_subtext {
+	margin-bottom: 6rem;
+}
+.project_open {
+	background-color: c.$black;
+	color: c.$white;
+	padding-inline: 2rem;
+	padding-block: 1rem;
+	cursor: pointer;
+	transition: 0.3s border-radius ease, 0.5s background-color ease;
+}
+.project_open:hover {
+	background-color: c.$red;
+	border-radius: 0.4rem;
+}
+
+.project_open_wrapper {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow-y: scroll;
+	padding-inline: 1rem;
+	z-index: 2;
+	background-color: c.$black;
+	width: 100%;
+	height: 100vh;
+	pointer-events: all;
+	visibility: hidden;
+	img {
+		width: 100%;
+		object-fit: contain;
+	}
+}
+.close_button {
+	position: fixed;
+	z-index: 3;
+	right: 1rem;
+	top: 1rem;
+	background-color: c.$red;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 2rem;
+	cursor: pointer;
 }
