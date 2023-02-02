@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^3.11.4",
+    "imagesloaded": "^5.0.0",
+    "parcel": "^2.8.3",
+    "sass": "^1.58.0",
+    "split-type": "^0.3.3"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3"
+  }
+}
