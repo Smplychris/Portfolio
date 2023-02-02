@@ -1,89 +1,94 @@
 @font-face {
-  src: url(../fonts/PPNeueMontreal-Book.woff2);
-  font-family: "Montreal";
-  font-weight: 400;
-  font-style: normal;
-  font-variant-numeric: slashed-zero;
-  font-variant-ligatures: normal;
-  font-feature-settings: "ss02";
+	src: url(../fonts/PPNeueMontreal-Book.woff2);
+	font-family: "Montreal";
+	font-feature-settings: "ss02";
+	font-style: normal;
+	font-weight: 400;
 }
 @font-face {
-  src: url(../fonts/PPNeueMontreal-Regular.woff2);
-  font-family: "Montreal";
-  font-weight: 500;
-  font-style: normal;
-  font-variant-numeric: slashed-zero;
-  font-variant-ligatures: normal;
-  font-feature-settings: "ss02";
+	src: url(../fonts/PPNeueMontreal-Regular.woff2);
+	font-family: "Montreal";
+	font-feature-settings: "ss02";
+	font-style: normal;
+	font-weight: 500;
 }
 @font-face {
-  font-family: "Montreal";
-  font-weight: 600;
-  font-style: normal;
-  font-variant-ligatures: normal;
-  font-feature-settings: "ss02";
-  font-variant-numeric: slashed-zero;
-  src: url(../fonts/PPNeueMontreal-Medium.woff2);
+	src: url(../fonts/PPNeueMontreal-Medium.woff2);
+	font-family: "Montreal";
+	font-feature-settings: "ss02";
+	font-style: normal;
+	font-weight: 600;
 }
 @font-face {
-  src: url(../fonts/PPNeueMontreal-Bold.woff2);
-  font-family: "Montreal";
-  font-weight: 700;
-  font-style: normal;
-  font-variant-numeric: slashed-zero;
-  font-variant-ligatures: normal;
-  font-feature-settings: "ss02";
+	src: url(../fonts/PPNeueMontreal-Bold.woff2);
+	font-feature-settings: "ss02";
+	font-family: "Montreal";
+	font-style: normal;
+	font-weight: 700;
 }
 
+$h1: 11.089rem;
+$h2: 4.236rem;
+$h3: 2.618rem;
+$h4: 1.618rem;
+$b: 1rem;
+$s: 0.618rem;
 
-$h1:11.089rem;
-$h2:4.236rem;
-$h3:2.618rem;
-$h4:1.618rem;
-$b:1rem;
-$s:0.618rem;
-
-h1{
-  font-family: "Montreal",sans-serif;
-  font-weight: 600;
-  font-size: $h1;
-  letter-spacing: -7;
-  line-height: 1.1;
+h1 {
+	font-family: "Montreal", sans-serif;
+	font-variant-numeric: slashed-zero;
+	font-variant-ligatures: normal;
+	font-weight: 600;
+	font-size: $h1;
+	letter-spacing: -7;
+	line-height: 1.1;
 }
-h2{
-  font-family: "Montreal",sans-serif;
-  font-weight: 600;
-  font-size: $h2;
-  letter-spacing: -3;
-  line-height: 1;
+h2 {
+	font-family: "Montreal", sans-serif;
+	font-variant-numeric: slashed-zero;
+	font-variant-ligatures: normal;
+	font-weight: 600;
+	font-size: $h2;
+	letter-spacing: -3;
+	line-height: 1;
 }
-h3{
-  font-family: "Montreal",sans-serif;
-  font-weight: 600;
-  font-size: $h3;
-  letter-spacing: -1.5;
-  line-height: 1.1;
+h3 {
+	font-family: "Montreal", sans-serif;
+	font-variant-numeric: slashed-zero;
+	font-variant-ligatures: normal;
+	font-weight: 600;
+	font-size: $h3;
+	letter-spacing: -1.5;
+	line-height: 1.1;
 }
-h4{
-  font-family: "Montreal",sans-serif;
-  font-weight: 600;
-  font-size: $h4;
-  letter-spacing: -0.2;
-  line-height: 1;
+h4 {
+	font-family: "Montreal", sans-serif;
+	font-variant-numeric: slashed-zero;
+	font-variant-ligatures: normal;
+	font-weight: 600;
+	font-size: $h4;
+	letter-spacing: -0.2;
+	line-height: 1;
 }
-p{
-  font-family: 'Montreal',sans-serif;
-  font-size: $b;
-  font-weight: 500;
+p {
+	font-family: "Montreal", sans-serif;
+	font-variant-numeric: slashed-zero;
+	font-variant-ligatures: normal;
+	font-size: $b;
+	font-weight: 500;
 }
-sub{
-  text-transform: uppercase;
-  font-family: 'Montreal',sans-serif;
-  font-weight: 600;
-  font-size: $s;
+sub {
+	font-family: "Montreal", sans-serif;
+	font-variant-numeric: slashed-zero;
+	font-variant-ligatures: normal;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: $s;
 }
-a{
-  font-family: 'Montreal',sans-serif;
-  font-size: $b;
-  font-weight: 500;
+a {
+	font-family: "Montreal", sans-serif;
+	font-variant-numeric: slashed-zero;
+	font-variant-ligatures: normal;
+	font-size: $b;
+	font-weight: 500;
 }
