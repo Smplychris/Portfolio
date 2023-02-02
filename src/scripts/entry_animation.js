@@ -2,7 +2,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import SplitType from "split-type";
-let imagesLoaded = require("imagesLoaded");
+let imagesLoaded = require("imagesloaded");
 
 let chars = new SplitType(".split_char", { types: "chars" });
 let words = new SplitType(".split_word", { types: "words" });
