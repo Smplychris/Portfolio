@@ -1,3 +1,7 @@
-import "./entry_animation";
+import "./modals";
+import "./loader";
 import "./scroll";
-import "./open_projects";
+
+window.onbeforeunload = function () {
+	window.scrollTo(0, 0);
+};

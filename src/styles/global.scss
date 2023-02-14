@@ -1,10 +1,21 @@
 @use "./fonts.scss" as f;
 @use "./colors.scss" as c;
 
+$One: 0.5rem;
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+}
+html,
+body {
+	scroll-behavior: initial;
+}
+body {
+	width: 100%;
+	min-height: 100%;
+	height: auto;
 }
 
 ::selection {
@@ -13,8 +24,9 @@
 }
 
 .container {
+	max-width: 1920px;
 	width: 100%;
-	padding-inline: 1rem;
+	padding-inline: $One;
 	margin-inline: auto;
 }
 a {

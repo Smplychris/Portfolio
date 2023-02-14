@@ -1,0 +1,30 @@
+@use "./global.scss" as g;
+@use "./fonts.scss" as f;
+@use "./colors.scss" as c;
+
+.hero-wrapper {
+	width: 100%;
+	height: 100vh;
+}
+.hero-content {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.moving-text-wrapper {
+	overflow: hidden;
+}
+.moving-text {
+	display: flex;
+	flex-direction: row;
+	align-items: start;
+	justify-content: flex-start;
+}
+.legal {
+	max-width: 60ch;
+	padding: 1rem;
+}

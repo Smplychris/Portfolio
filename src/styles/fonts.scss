@@ -40,7 +40,7 @@ h1 {
 	font-variant-ligatures: normal;
 	font-weight: 600;
 	font-size: $h1;
-	letter-spacing: -7;
+	letter-spacing: -9;
 	line-height: 1.1;
 }
 h2 {
@@ -49,8 +49,8 @@ h2 {
 	font-variant-ligatures: normal;
 	font-weight: 600;
 	font-size: $h2;
-	letter-spacing: -3;
-	line-height: 1;
+	letter-spacing: -2;
+	line-height: 1.1;
 }
 h3 {
 	font-family: "Montreal", sans-serif;
@@ -68,7 +68,7 @@ h4 {
 	font-weight: 600;
 	font-size: $h4;
 	letter-spacing: -0.2;
-	line-height: 1;
+	line-height: 1.1;
 }
 p {
 	font-family: "Montreal", sans-serif;

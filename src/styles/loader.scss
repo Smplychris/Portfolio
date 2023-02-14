@@ -1,0 +1,57 @@
+@use "./global.scss" as g;
+@use "./fonts.scss" as f;
+@use "./colors.scss" as c;
+
+#loading-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: c.$black;
+	z-index: 2;
+	padding: g.$One;
+}
+#progress {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.progress-bar-wrap {
+	width: 100%;
+	max-width: 400px;
+	height: 5px;
+	background-color: #ffffff2a;
+	overflow-x: hidden;
+	border-radius: 100vw;
+}
+
+#progress-bar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	background-color: c.$white;
+	transform: translateX(-100%);
+	border-radius: 100vw;
+}
+
+.progress-count-wrap {
+	margin: 20px;
+	text-align: center;
+	color: c.$white;
+}
+
+#progress-count {
+	margin: 10px;
+	font-size: 3em;
+	color: c.$white;
+	font-family: "Montreal", sans-serif;
+}

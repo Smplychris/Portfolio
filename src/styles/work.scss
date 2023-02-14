@@ -1,0 +1,134 @@
+@use "./global.scss" as g;
+@use "./fonts.scss" as f;
+@use "./colors.scss" as c;
+
+.work-wrapper {
+	width: 100%;
+}
+.work-content {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: g.$One;
+}
+.project-wrapper {
+	min-height: 600px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: g.$One;
+	padding: g.$One;
+}
+.one {
+	background-image: url("https://studiofreight.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fbwpwtlijv9w2%2F1bkLdF10PPycyokn5YhIuV%2F2c1bb31812daef424a6dca02f469dbb2%2F1up.jpg&w=1920&q=90");
+}
+.two {
+	background-image: url("https://studiofreight.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fbwpwtlijv9w2%2F4ltMpre7lsXn7jyMwtRIR1%2F3f29d42314384994082459aa81e65219%2F1.jpg&w=1920&q=90");
+}
+.project-info-wrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding-bottom: g.$One;
+}
+.project-text-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+.project-tittle {
+	overflow: hidden;
+	color: white;
+}
+.project-description {
+	overflow: hidden;
+	color: white;
+}
+.project-button {
+	cursor: pointer;
+	padding-inline: 2rem;
+	padding-block: g.$One;
+	border-radius: 100vw;
+	background-color: c.$gray;
+	backdrop-filter: blur(18px);
+	p {
+		font-weight: 600;
+	}
+}
+
+.project-modal {
+	z-index: 9;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(255, 255, 255);
+	visibility: hidden;
+	padding: g.$One;
+}
+
+.project-modal-wrapper {
+	scroll-behavior: initial;
+	width: 100%;
+	max-width: 1920px;
+	height: 100%;
+	border-radius: g.$One;
+	overflow-y: scroll;
+	overscroll-behavior: contain;
+}
+.project-modal-wrapper::-webkit-scrollbar {
+	display: none;
+}
+.project-modal-content {
+	width: 100%;
+	min-height: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: g.$One;
+}
+.project-modal-image {
+	width: 100%;
+	display: grid;
+	gap: g.$One;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	img {
+		width: 100%;
+		border-radius: g.$One;
+		object-fit: cover;
+	}
+}
+.project-modal-text {
+	width: 100%;
+	border-radius: g.$One;
+	height: 400px;
+	background-color: black;
+	padding: g.$One;
+	h3 {
+		color: white;
+	}
+	p {
+		color: white;
+	}
+}
+.project-modal-close {
+	cursor: pointer;
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	max-width: 1440px;
+	a {
+		font-weight: 700;
+		background-color: red;
+	}
+}

@@ -13,65 +13,140 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="./styles/main.scss" />
-		<script type="module" src="./scripts/main.js"></script>
+		<script type="module" src="./scripts/main.js" async></script>
 		<title>Portfolio</title>
 	</head>
-	<body class="no_scroll">
-		<div class="content_wrapper">
-			<div class="hero_wrapper">
-				<div class="container">
-					<div class="hero_content">
-						<div class="hero_content_tittle">
-							<h1 class="split_char">Stage_001</h1>
+	<body>
+		<main>
+			<div id="loading-container">
+				<div id="progress">
+					<div class="progress-bar-wrap">
+						<div id="progress-bar">
 						</div>
-						<div class="hero_content_subtext">
-							<h3 class="split_word">
-								Ist kunste herrje mutter ordnen buckte ist ihm himmel.
-							</h3>
-						</div>
+					</div>
+					<div class="progress-count-wrap">
+						<span id="progress-count">0</span>%
 					</div>
 				</div>
 			</div>
-			<div class="work_wrapper">
-				<div class="container">
-					<div class="work_content">
-						<div class="project">
-							<div class="close_button"></div>
-							<div class="project_open_wrapper">
-								<img src="./img/globe.png" alt="" />
-								<img src="./img/globe.png" alt="" />
-								<img src="./img/globe.png" alt="" />
+			<section>
+				<div class="hero-wrapper">
+					<div class="container">
+						<div class="hero-content">
+							<div class="moving-text-wrapper">
+								<div class="moving-text">
+									<h2>Wannabe</h2>
+								</div>
 							</div>
-							<div class="project_tittle">
-								<h2>Project_001</h2>
+							<div class="moving-text-wrapper">
+								<div class="moving-text">
+									<h2>Designer</h2>
+								</div>
 							</div>
-							<div class="project_subtext">
-								<h4>Project about something i have done</h4>
-							</div>
-							<div class="project_open">
-								<p>View More</p>
-							</div>
-						</div>
-						<div class="project">
-							<div class="close_button"></div>
-							<div class="project_open_wrapper">
-								<img src="./img/flame.png" alt="" />
-								<img src="./img/flame.png" alt="" />
-								<img src="./img/flame.png" alt="" />
-							</div>
-							<div class="project_tittle">
-								<h2>Project_002</h2>
-							</div>
-							<div class="project_subtext">
-								<h4>Project about something i have done</h4>
-							</div>
-							<div class="project_open">
-								<p>View More</p>
+							<div class="moving-text-wrapper">
+								<div class="moving-text">
+									<p>Looking for a job</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+			</section>
+			<section>
+				<div class="work-wrapper">
+					<div class="container">
+						<div class="work-content">
+							<div class="project-wrapper one">
+								<div class="project-info-wrapper">
+									<div class="project-text-wrapper">
+										<div class="project-tittle">
+											<h2>Heading</h2>
+										</div>
+										<div class="project-description">
+											<h4>Subheading</h4>
+										</div>
+									</div>
+									<div class="project-button"><p>Project Details</p></div>
+								</div>
+								<div class="project-modal">
+									<div class="project-modal-wrapper">
+										<div class="project-modal-close"><a>Close</a></div>
+										<div class="project-modal-content">
+											<div class="project-modal-image">
+												<img src="./img/Big1.jpg" alt="" />
+											</div>
+											<div class="project-modal-image">
+												<img src="./img/Big2.jpg" alt="" />
+												<img src="./img/Big3.jpg" alt="" />
+											</div>
+											<div class="project-modal-image">
+												<div class="project-modal-text">
+													<h3>Services</h3>
+													<p>
+														STRATEGY, VISUAL IDENTITY, WEB DESIGN, WEB
+														DEVELOPMENT, ART DIRECTION, COLLATERAL
+													</p>
+												</div>
+												<div class="project-modal-text">
+													<h3>Stack</h3>
+													<p>
+														FIGMA, ADOBE, VERCEL, NEXT.JS, WEBGL, LENIS,
+														CONTENTFUL, GSAP
+													</p>
+												</div>
+											</div>
+											<div class="project-modal-image">
+												<img src="./img/Big4.png" alt="" />
+											</div>
+											<div class="project-modal-image">
+												<img src="./img/Big5.png" alt="" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="project-wrapper two">
+								<div class="project-info-wrapper">
+									<div class="project-text-wrapper">
+										<div class="project-tittle">
+											<h2>Heading</h2>
+										</div>
+										<div class="project-description">
+											<h4>Subheading</h4>
+										</div>
+									</div>
+									<div class="project-button"><p>Project Details</p></div>
+								</div>
+								<div class="project-modal">
+									<div class="project-modal-wrapper">
+										<div class="project-modal-close"><a>Close</a></div>
+										<div class="project-modal-content">
+											<div class="project-modal-image"></div>
+											<div class="project-modal-image"></div>
+											<div class="project-modal-image"></div>
+											<div class="project-modal-image"></div>
+											<div class="project-modal-image"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="legal">
+				<p>
+					©2023 Christian Dechkov. All rights reserved. Unless otherwise
+					indicated, all material on this site is copyrighted under the EU copyright laws. No part of these pages, either text or images, may be used for any purpose
+					other than personal use unless explicit authorisation is given by
+					Christian Dechkov. Reproduction, modiﬁcation, storage in a retrieval
+					system or retransmission,in any form or by any means — electronic or
+					otherwise, for reasons other than personal use, is strictly
+					prohibited without prior permission.
+				</p>
 			</div>
-		</div>
+		</footer>
 	</body>
 </html>
