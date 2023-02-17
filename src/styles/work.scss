@@ -12,21 +12,23 @@
 	gap: g.$One;
 }
 .project-wrapper {
-	min-height: 600px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-color: #eaecef;
 	border-radius: g.$One;
-	padding: g.$One;
+	overflow: hidden;
 }
-.one {
-	background-image: url("https://studiofreight.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fbwpwtlijv9w2%2F1bkLdF10PPycyokn5YhIuV%2F2c1bb31812daef424a6dca02f469dbb2%2F1up.jpg&w=1920&q=90");
-}
-.two {
-	background-image: url("https://studiofreight.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fbwpwtlijv9w2%2F4ltMpre7lsXn7jyMwtRIR1%2F3f29d42314384994082459aa81e65219%2F1.jpg&w=1920&q=90");
+.project-image {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	img {
+		width: 100%;
+		max-width: 1440px;
+	}
 }
 .project-info-wrapper {
 	width: 100%;
@@ -34,7 +36,13 @@
 	flex-direction: row;
 	align-items: flex-start;
 	justify-content: space-between;
-	padding-bottom: g.$One;
+	padding: g.$One * 2;
+}
+@media only screen and (max-width: 600px) {
+	.project-info-wrapper {
+		padding: g.$One;
+		margin-bottom: 2rem;
+	}
 }
 .project-text-wrapper {
 	display: flex;
@@ -42,22 +50,24 @@
 }
 .project-tittle {
 	overflow: hidden;
-	color: white;
+	color: c.$black;
 }
 .project-description {
 	overflow: hidden;
-	color: white;
+	color: c.$black;
 }
 .project-button {
 	cursor: pointer;
-	padding-inline: 2rem;
+	padding-inline: g.$One * 2;
 	padding-block: g.$One;
-	border-radius: 100vw;
-	background-color: c.$gray;
-	backdrop-filter: blur(18px);
-	p {
-		font-weight: 600;
-	}
+	border-radius: calc(g.$One / 1.5);
+	background-color: c.$black;
+	color: c.$white;
+	font-family: "Montreal", sans-serif;
+	font-variant-numeric: slashed-zero;
+	font-variant-ligatures: normal;
+	font-size: f.$b;
+	font-weight: 600;
 }
 
 .project-modal {
@@ -111,24 +121,30 @@
 .project-modal-text {
 	width: 100%;
 	border-radius: g.$One;
-	height: 400px;
 	background-color: black;
-	padding: g.$One;
+	padding: g.$One * 2;
 	h3 {
-		color: white;
+		color: c.$white;
+		padding-bottom: g.$One;
 	}
 	p {
-		color: white;
+		color: c.$gray;
 	}
 }
 .project-modal-close {
+	padding-inline: g.$One * 2;
+	padding-block: g.$One;
 	cursor: pointer;
 	position: fixed;
 	z-index: 5;
-	top: 0;
-	max-width: 1440px;
+	top: g.$One * 2;
+	right: g.$One * 2;
+	background-color: c.$black;
+	border-radius: calc(g.$One / 1.5);
 	a {
+		//padding-inline: g.$One * 2;
+		//padding-block: g.$One;
 		font-weight: 700;
-		background-color: red;
+		color: c.$white;
 	}
 }

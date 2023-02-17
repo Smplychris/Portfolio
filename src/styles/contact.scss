@@ -1,0 +1,61 @@
+@use "./global.scss" as g;
+@use "./fonts.scss" as f;
+@use "./colors.scss" as c;
+
+.contact-wrapper {
+	width: 100%;
+	padding-bottom: g.$One;
+}
+.contact-content {
+	margin-block: g.$One;
+	width: 100%;
+	display: grid;
+	gap: g.$One;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.contact-content-element {
+	width: 100%;
+	position: relative;
+	background-color: c.$black;
+	border-radius: g.$One;
+	padding: g.$One * 2;
+	color: c.$white;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	overflow: hidden;
+	mask-image: radial-gradient(white, black);
+	-webkit-mask-image: -webkit-radial-gradient(white, black);
+	svg {
+		stroke: c.$white;
+		width: 62px;
+		position: relative;
+		z-index: 4;
+	}
+}
+.content-element-text {
+	position: relative;
+	z-index: 4;
+	display: flex;
+	flex-direction: column;
+	gap: calc(g.$One / 2);
+}
+@media only screen and (max-width: 600px) {
+	.contact-content-element {
+		padding: g.$One;
+	}
+}
+.element-hover {
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		90deg,
+		rgba(77, 13, 227, 1) 0%,
+		rgba(17, 17, 17, 1) 90%
+	);
+}

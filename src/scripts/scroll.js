@@ -7,32 +7,40 @@ projectWrapper.forEach((wrapper) => {
 	let tittle = wrapper.querySelector(".project-tittle");
 	let description = wrapper.querySelector(".project-description");
 	let button = wrapper.querySelector(".project-button");
+	let image = wrapper.querySelector(".project-image");
 	let textAppear = gsap.timeline({
+		defaults: { ease: "expo.out", duration: 2 },
 		scrollTrigger: {
 			trigger: wrapper,
-			start: "top 60%",
+			start: "top 80%",
 		},
 	});
 	textAppear.from(tittle.firstElementChild, {
-		yPercent: 101,
-		skewY: -7,
-		duration: 0.8,
+		yPercent: 120,
+		skewY: 7,
 	});
 	textAppear.from(
-		description.firstElementChild,
+		description,
 		{
 			yPercent: 101,
-			duration: 0.8,
+			opacity: 0,
 		},
-		"-=0.7"
+		"-=2"
 	);
 	textAppear.from(
 		button,
 		{
 			opacity: 0,
 			yPercent: 50,
-			duration: 0.8,
 		},
-		"-=0.7"
+		"-=2"
+	);
+	textAppear.from(
+		image,
+		{
+			yPercent: 101,
+			duration: 2,
+		},
+		"-=1.95"
 	);
 });
