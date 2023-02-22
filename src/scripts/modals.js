@@ -4,12 +4,11 @@ import Lenis from "@studio-freight/lenis";
 gsap.registerPlugin(ScrollTrigger);
 
 let page = new Lenis({
-	duration: 0.5,
+	duration: 0.8,
 	easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
 	direction: "vertical",
 	gestureDirection: "vertical",
 	smooth: true,
-	mouseMultiplier: 2,
 	smoothTouch: false,
 	touchMultiplier: 2,
 	infinite: false,
@@ -48,6 +47,7 @@ projectOpen.forEach((project) => {
 	modal.stop();
 	let enter = project.querySelector(".project-modal");
 	let open = project.querySelector(".project-button");
+	let top = project.querySelector("#top");
 	let close = project.querySelector(".project-modal-close");
 	let projectScroll = project.querySelector(".project-modal-content");
 	let swiperTop = document.querySelector(".swiper.top");
@@ -59,7 +59,20 @@ projectOpen.forEach((project) => {
 	gsap.set(swiperBottom, {
 		yPercent: 101,
 	});
-	let opener = gsap.timeline({ paused: true });
+	let opener = gsap.timeline({
+		paused: true,
+		onStart: () => {
+			page.stop();
+		},
+		onComplete: () => {
+			modal.start();
+		},
+		onReverseComplete: () => {
+			modal.scrollTo(top, { immediate: true });
+			modal.stop();
+			page.start();
+		},
+	});
 	opener.to([swiperTop, swiperBottom], {
 		yPercent: 0,
 		duration: 1,
@@ -79,13 +92,9 @@ projectOpen.forEach((project) => {
 	});
 	open.addEventListener("click", () => {
 		opener.play();
-		modal.start();
-		page.stop();
 	});
 	close.addEventListener("click", () => {
 		opener.reverse();
-		modal.stop();
-		page.start();
 	});
 });
 export { page };

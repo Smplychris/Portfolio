@@ -1,5 +1,5 @@
-import "./modals";
 import "./loader";
+import "./modals";
 import "./scroll";
 import "./hover";
 
