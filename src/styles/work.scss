@@ -19,15 +19,32 @@
 	border-radius: g.$One;
 	overflow: hidden;
 }
+.dark {
+	background-color: #000000;
+	.project-tittle {
+		h3 {
+			color: c.$white;
+		}
+	}
+	.project-description {
+		p {
+			color: c.$white;
+		}
+	}
+	.project-button {
+		background-color: c.$white;
+		color: c.$black;
+	}
+}
 .project-image {
 	width: 100%;
 	height: 100%;
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	img {
 		width: 100%;
-		max-width: 1440px;
 	}
 }
 .project-info-wrapper {
@@ -81,7 +98,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: rgb(255, 255, 255);
+	background-color: white;
 	visibility: hidden;
 	padding: g.$One;
 }

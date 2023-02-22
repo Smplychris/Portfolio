@@ -40,6 +40,10 @@
 	display: flex;
 	flex-direction: column;
 	gap: calc(g.$One / 2);
+	p {
+		opacity: 70%;
+		font-weight: 400;
+	}
 }
 @media only screen and (max-width: 600px) {
 	.contact-content-element {
