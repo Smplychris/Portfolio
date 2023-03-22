@@ -6,6 +6,7 @@ let hoverElement = document.querySelectorAll(".contact-content-element");
 hoverElement.forEach((element) => {
 	let swiper = element.querySelector(".element-hover");
 	let arrow = element.querySelector("svg");
+	let text = element.querySelector(".content-element-text");
 	gsap.set(swiper, {
 		xPercent: -101,
 	});
@@ -24,10 +25,10 @@ hoverElement.forEach((element) => {
 		},
 		"-=0.4"
 	);
-	element.addEventListener("mouseover", () => {
+	element.addEventListener("pointerover", () => {
 		hoverInEffect.play();
 	});
-	element.addEventListener("mouseleave", () => {
+	element.addEventListener("pointerleave", () => {
 		hoverInEffect.reverse();
 	});
 });

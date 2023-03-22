@@ -10,13 +10,14 @@
 	height: 100vh;
 	z-index: 1;
 	pointer-events: none;
+	overflow: hidden;
 }
 .swiper {
 	position: absolute;
 	z-index: 3;
 	width: 100%;
-	height: 51vh;
-	background-color: rgb(220, 27, 27);
+	height: 50vh;
+	background-color: c.$black;
 }
 .top {
 	top: 0;

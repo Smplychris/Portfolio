@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 let page = new Lenis({
 	duration: 0.8,
-	easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+	easing: (t) => Math.min(1, 1.01 - Math.pow(2, -10 * t)),
 	direction: "vertical",
 	gestureDirection: "vertical",
 	smooth: true,
@@ -45,19 +45,23 @@ projectOpen.forEach((project) => {
 	}
 	requestAnimationFrame(raf);
 	modal.stop();
-	let enter = project.querySelector(".project-modal");
 	let open = project.querySelector(".project-button");
-	let top = project.querySelector("#top");
 	let close = project.querySelector(".project-modal-close");
-	let projectScroll = project.querySelector(".project-modal-content");
+	let enter = project.querySelector(".project-modal");
+	let tittle = project.querySelectorAll(".animated-text");
+	let content = project.querySelectorAll(".project-modal-image");
+	let top = project.querySelector("#top");
 	let swiperTop = document.querySelector(".swiper.top");
 	let swiperBottom = document.querySelector(".swiper.bottom");
 
 	gsap.set(swiperTop, {
-		yPercent: -101,
+		yPercent: -100,
 	});
 	gsap.set(swiperBottom, {
-		yPercent: 101,
+		yPercent: 100,
+	});
+	gsap.set(tittle, {
+		yPercent: 100,
 	});
 	let opener = gsap.timeline({
 		paused: true,
@@ -68,33 +72,38 @@ projectOpen.forEach((project) => {
 			modal.start();
 		},
 		onReverseComplete: () => {
-			modal.scrollTo(top, { immediate: true });
+			//modal.scrollTo(top, { immediate: true });
 			modal.stop();
 			page.start();
 		},
 	});
 	opener.to([swiperTop, swiperBottom], {
 		yPercent: 0,
+		ease: "power3.inOut",
 		duration: 1,
-		ease: "expo.inOut",
 	});
 	opener.set(enter, {
 		autoAlpha: 1,
 	});
-	opener.from(projectScroll.children, {
+	opener.to(tittle, {
+		ease: "circ.out",
+		duration: 1,
+		yPercent: 0,
+		stagger: 0.3,
+	});
+	opener.from(content, {
 		opacity: 0,
-		yPercent: 20,
-		stagger: 0.1,
 	});
 	opener.from(close, {
 		opacity: 0,
 		yPercent: -100,
 	});
 	open.addEventListener("click", () => {
-		opener.play();
+		opener.timeScale(1).play();
 	});
 	close.addEventListener("click", () => {
-		opener.reverse();
+		modal.scrollTo(top);
+		opener.timeScale(1).reverse();
 	});
 });
 export { page };

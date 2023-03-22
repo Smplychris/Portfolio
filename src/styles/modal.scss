@@ -1,0 +1,101 @@
+@use "./global.scss" as g;
+@use "./fonts.scss" as f;
+@use "./colors.scss" as c;
+
+.project-modal {
+	z-index: 9;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: c.$black;
+	visibility: hidden;
+	padding: g.$One;
+}
+
+.project-modal-wrapper {
+	scroll-behavior: initial;
+	width: 100%;
+	max-width: 1920px;
+	height: 100%;
+	border-radius: g.$One;
+	overflow: scroll;
+	overscroll-behavior: contain;
+}
+.project-modal-wrapper::-webkit-scrollbar {
+	display: none;
+}
+.project-modal-content {
+	width: 100%;
+	min-height: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: g.$One;
+}
+
+.project-modal-hero {
+	width: 100%;
+	height: 100svh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+.modal-hero-text-wrapper {
+	margin-bottom: g.$One;
+	overflow: hidden;
+	color: c.$white;
+	h4 {
+		color: c.$gray;
+		font-weight: 400;
+	}
+}
+
+.project-modal-image {
+	width: 100%;
+	display: grid;
+	gap: g.$One;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	img {
+		width: 100%;
+		border-radius: g.$One;
+		object-fit: cover;
+	}
+}
+.project-modal-text {
+	width: 100%;
+	border-radius: g.$One;
+	background-color: c.$white;
+	padding: g.$One * 2;
+	h3 {
+		color: c.$black;
+		padding-bottom: g.$One;
+	}
+	p {
+		color: c.$gray;
+	}
+}
+.project-modal-close {
+	padding-inline: g.$One * 2;
+	padding-block: g.$One;
+	cursor: pointer;
+	position: fixed;
+	z-index: 5;
+	top: g.$One * 2;
+	right: g.$One * 2;
+	background-color: c.$white;
+	border-radius: calc(g.$One / 1.5);
+	p {
+		font-size: 12px;
+		font-weight: 700;
+		color: c.$black;
+	}
+}
