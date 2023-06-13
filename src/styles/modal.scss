@@ -69,6 +69,10 @@
 		border-radius: g.$One;
 		object-fit: cover;
 	}
+	video {
+		width: 100%;
+		border-radius: g.$One;
+	}
 }
 .project-modal-text {
 	width: 100%;
