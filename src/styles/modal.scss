@@ -82,9 +82,13 @@
 	h3 {
 		color: c.$black;
 		padding-bottom: g.$One;
+		sup {
+			font-size: 26px;
+		}
 	}
 	p {
 		color: c.$gray;
+		max-width: 75ch;
 	}
 }
 .project-modal-close {
