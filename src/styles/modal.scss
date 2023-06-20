@@ -6,14 +6,14 @@
 	z-index: 9;
 	position: fixed;
 	width: 100%;
-	height: 100vh;
+	height: 100svh;
 	top: 0;
 	left: 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: c.$black;
+	background-color: c.$deepblack;
 	visibility: hidden;
 	padding: g.$One;
 }
@@ -23,7 +23,7 @@
 	width: 100%;
 	max-width: 1920px;
 	height: 100%;
-	border-radius: g.$One;
+	border-radius: g.$Corner;
 	overflow: scroll;
 	overscroll-behavior: contain;
 }
@@ -66,44 +66,35 @@
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	img {
 		width: 100%;
-		border-radius: g.$One;
+		border-radius: g.$Corner;
 		object-fit: cover;
 	}
 	video {
 		width: 100%;
-		border-radius: g.$One;
+		border-radius: g.$Corner;
 	}
 }
 .project-modal-text {
 	width: 100%;
-	border-radius: g.$One;
-	background-color: c.$white;
+	border-radius: g.$Corner;
+	background-color: c.$black;
 	padding: g.$One * 2;
 	h3 {
-		color: c.$black;
+		color: c.$white;
 		padding-bottom: g.$One;
-		sup {
-			font-size: 26px;
-		}
 	}
 	p {
-		color: c.$gray;
+		color: c.$white;
 		max-width: 75ch;
 	}
 }
 .project-modal-close {
-	padding-inline: g.$One * 2;
-	padding-block: g.$One;
 	cursor: pointer;
 	position: fixed;
 	z-index: 5;
 	top: g.$One * 2;
 	right: g.$One * 2;
-	background-color: c.$white;
-	border-radius: calc(g.$One / 1.5);
-	p {
-		font-size: 12px;
-		font-weight: 700;
-		color: c.$black;
+	svg {
+		width: 32px;
 	}
 }

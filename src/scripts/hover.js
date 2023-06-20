@@ -17,18 +17,32 @@ hoverElement.forEach((element) => {
 	hoverInEffect.to(swiper, {
 		xPercent: 0,
 	});
-	hoverInEffect.to(
+	hoverInEffect.from(
 		arrow,
 		{
-			x: 10,
-			y: -10,
+			opacity: 0,
+			x: -20,
 		},
-		"-=0.4"
+		"-=0.2"
 	);
-	element.addEventListener("pointerover", () => {
+	element.addEventListener("mouseover", () => {
 		hoverInEffect.play();
 	});
 	element.addEventListener("pointerleave", () => {
 		hoverInEffect.reverse();
+	});
+});
+let projectHover = document.querySelectorAll(".project-wrapper");
+projectHover.forEach((hover) => {
+	let image = hover.querySelector(".project-image");
+	let imageHover = gsap.timeline({ paused: true });
+	imageHover.to(image, {
+		y: 5,
+	});
+	image.addEventListener("pointerover", () => {
+		imageHover.play();
+	});
+	image.addEventListener("pointerleave", () => {
+		imageHover.reverse();
 	});
 });

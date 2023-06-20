@@ -1,7 +1,8 @@
 @use "./fonts.scss" as f;
 @use "./colors.scss" as c;
 
-$One: 0.5rem;
+$One: 0.6rem;
+$Corner: 1rem;
 
 * {
 	box-sizing: border-box;
@@ -11,6 +12,7 @@ $One: 0.5rem;
 html,
 body {
 	scroll-behavior: initial;
+	background-color: black;
 }
 body {
 	width: 100%;

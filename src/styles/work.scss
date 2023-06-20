@@ -15,12 +15,12 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	background-color: #eaecef;
-	border-radius: g.$One;
+	background-color: c.$black;
+	border-radius: g.$Corner;
 	overflow: hidden;
 }
 .dark {
-	background-color: #000000;
+	background-color: c.$black;
 	.project-tittle {
 		h3 {
 			color: c.$white;
@@ -43,6 +43,7 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	cursor: pointer;
 	img {
 		width: 100%;
 	}

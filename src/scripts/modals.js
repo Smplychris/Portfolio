@@ -5,12 +5,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 let page = new Lenis({
 	duration: 0.8,
-	easing: (t) => Math.min(1, 1.01 - Math.pow(2, -10 * t)),
+	lerp: 0.1,
 	orientation: "vertical",
 	gestureOrientation: "vertical",
 	smoothWheel: true,
 	smoothTouch: false,
-	touchMultiplier: 2,
+	touchMultiplier: 0,
 	infinite: false,
 });
 function raf(time) {
@@ -29,13 +29,14 @@ projectOpen.forEach((project) => {
 	let modal = new Lenis({
 		wrapper: modalWrapper,
 		content: modalContent,
-		duration: 1,
+		duration: 0.8,
+		lerp: 0.1,
 		orientation: "vertical",
 		gestureOrientation: "vertical",
 		smoothWheel: true,
 		wheelMultiplier: 1,
 		smoothTouch: true,
-		touchMultiplier: 1,
+		touchMultiplier: 0,
 		infinite: false,
 	});
 	function raf(time) {
@@ -45,7 +46,7 @@ projectOpen.forEach((project) => {
 	}
 	requestAnimationFrame(raf);
 	modal.stop();
-	let open = project.querySelector(".project-button");
+	let open = project.querySelector(".project-image");
 	let close = project.querySelector(".project-modal-close");
 	let enter = project.querySelector(".project-modal");
 	let tittle = project.querySelectorAll(".animated-text");
