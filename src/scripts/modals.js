@@ -108,3 +108,30 @@ projectOpen.forEach((project) => {
 	});
 });
 export { page };
+
+let videos = document.querySelectorAll(".video-wrapper").forEach((video) => {
+	let play = video.querySelector("video");
+	let button = video.querySelector(".play-pause-button");
+	let playButton = button.querySelector("#play");
+	let pauseButton = button.querySelector("#pause");
+	gsap.set(pauseButton, {
+		scale: 0,
+	});
+	let playPause = gsap.timeline({
+		paused: true,
+		ease: "power2.inOut",
+	});
+	playPause.to(playButton, {
+		scale: 0,
+		duration: 0.2,
+	});
+	playPause.to(pauseButton, {
+		scale: 1,
+		duration: 0.2,
+	});
+
+	play.addEventListener("click", function (event) {
+		if (this.paused) this.play(), playPause.play();
+		else this.pause(), playPause.reverse();
+	});
+});

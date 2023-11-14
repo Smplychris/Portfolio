@@ -15,7 +15,7 @@
 	justify-content: center;
 	background-color: c.$deepblack;
 	visibility: hidden;
-	padding: g.$One;
+	padding: g.$One/2;
 }
 
 .project-modal-wrapper {
@@ -37,7 +37,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: g.$One;
+	gap: g.$One/2;
 }
 
 .project-modal-hero {
@@ -62,7 +62,7 @@
 .project-modal-image {
 	width: 100%;
 	display: grid;
-	gap: g.$One;
+	gap: g.$One/2;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	img {
 		width: 100%;
@@ -96,5 +96,26 @@
 	right: g.$One * 2;
 	svg {
 		width: 32px;
+	}
+}
+.video-wrapper {
+	width: 100%;
+	position: relative;
+	cursor: pointer;
+}
+.play-pause-button {
+	z-index: 4;
+	pointer-events: none;
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 100vw;
+	background-color: c.$gray;
+	img {
+		opacity: 90%;
+		width: 100%;
+		position: absolute;
 	}
 }

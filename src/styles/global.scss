@@ -19,7 +19,9 @@ body {
 	min-height: 100%;
 	height: auto;
 }
-
+body::-webkit-scrollbar {
+	display: none;
+}
 ::selection {
 	color: #e4c40d;
 	background: #4c0de4;
