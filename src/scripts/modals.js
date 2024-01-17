@@ -49,20 +49,19 @@ projectOpen.forEach((project) => {
 	let open = project.querySelector(".project-image");
 	let close = project.querySelector(".project-modal-close");
 	let enter = project.querySelector(".project-modal");
-	let tittle = project.querySelectorAll(".animated-text");
 	let content = project.querySelectorAll(".project-modal-image");
 	let top = project.querySelector("#top");
+	let heroVideo = project.querySelector(".hero-video");
 	let swiperTop = document.querySelector(".swiper.top");
 	let swiperBottom = document.querySelector(".swiper.bottom");
 
 	gsap.set(swiperTop, {
 		yPercent: -100,
+		opacity: 0,
 	});
 	gsap.set(swiperBottom, {
 		yPercent: 100,
-	});
-	gsap.set(tittle, {
-		yPercent: 100,
+		opacity: 0,
 	});
 	let opener = gsap.timeline({
 		paused: true,
@@ -71,40 +70,51 @@ projectOpen.forEach((project) => {
 		},
 		onComplete: () => {
 			modal.start();
+			heroVideo.play();
 		},
 		onReverseComplete: () => {
-			//modal.scrollTo(top, { immediate: true });
+			modal.scrollTo(top, { immediate: true });
 			modal.stop();
 			page.start();
+			//modal.scrollTo(top);
 		},
 	});
 	opener.to([swiperTop, swiperBottom], {
 		yPercent: 0,
+		opacity: 1,
 		ease: "power3.inOut",
 		duration: 1,
 	});
 	opener.set(enter, {
 		autoAlpha: 1,
 	});
-	opener.to(tittle, {
-		ease: "circ.out",
-		duration: 1,
-		yPercent: 0,
-		stagger: 0.3,
-	});
 	opener.from(content, {
 		opacity: 0,
+		y: 40,
+		scale: 0.9,
+		//filter: "blur(30px)",
+		duration: 1,
+		ease: "power3.inOut",
+		//stagger: 0.1,
 	});
-	opener.from(close, {
-		opacity: 0,
-		yPercent: -100,
-	});
+	opener.from(
+		close,
+		{
+			opacity: 0,
+			yPercent: 80,
+			scale: 0.9,
+			duration: 1,
+			ease: "power3.inOut",
+			//filter: "blur(30px)",
+		},
+		"-=1.2"
+	);
 	open.addEventListener("click", () => {
 		opener.timeScale(1).play();
 	});
 	close.addEventListener("click", () => {
-		modal.scrollTo(top);
 		opener.timeScale(1).reverse();
+		//modal.scrollTo(top);
 	});
 });
 export { page };
@@ -114,24 +124,24 @@ let videos = document.querySelectorAll(".video-wrapper").forEach((video) => {
 	let button = video.querySelector(".play-pause-button");
 	let playButton = button.querySelector("#play");
 	let pauseButton = button.querySelector("#pause");
-	gsap.set(pauseButton, {
+	gsap.set(playButton, {
 		scale: 0,
 	});
 	let playPause = gsap.timeline({
 		paused: true,
 		ease: "power2.inOut",
 	});
-	playPause.to(playButton, {
-		scale: 0,
-		duration: 0.2,
-	});
 	playPause.to(pauseButton, {
+		scale: 0,
+		duration: 0.1,
+	});
+	playPause.to(playButton, {
 		scale: 1,
-		duration: 0.2,
+		duration: 0.1,
 	});
 
 	play.addEventListener("click", function (event) {
-		if (this.paused) this.play(), playPause.play();
-		else this.pause(), playPause.reverse();
+		if (this.paused) this.play(), playPause.reverse();
+		else this.pause(), playPause.play();
 	});
 });

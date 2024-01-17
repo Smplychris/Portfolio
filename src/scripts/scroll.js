@@ -44,3 +44,11 @@ projectWrapper.forEach((wrapper) => {
 		"-=1.95"
 	);
 });
+<div class="project-modal-hero">
+	<div class="modal-hero-text-wrapper">
+		<h3 class="animated-text">STARH</h3>
+	</div>
+	<div class="modal-hero-text-wrapper">
+		<h4 class="animated-text">ARCHITECTURE</h4>
+	</div>
+</div>;

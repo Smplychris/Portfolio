@@ -17,6 +17,13 @@ hoverElement.forEach((element) => {
 	hoverInEffect.to(swiper, {
 		xPercent: 0,
 	});
+	hoverInEffect.to(
+		text,
+		{
+			color: "#1a1a1a",
+		},
+		"-=0.4"
+	);
 	hoverInEffect.from(
 		arrow,
 		{
@@ -28,7 +35,7 @@ hoverElement.forEach((element) => {
 	element.addEventListener("mouseover", () => {
 		hoverInEffect.play();
 	});
-	element.addEventListener("pointerleave", () => {
+	element.addEventListener("mouseleave", () => {
 		hoverInEffect.reverse();
 	});
 });
@@ -37,12 +44,13 @@ projectHover.forEach((hover) => {
 	let image = hover.querySelector(".project-image");
 	let imageHover = gsap.timeline({ paused: true });
 	imageHover.to(image, {
-		y: 5,
+		filter: "blur(30px)",
+		duration: 0.5,
 	});
-	image.addEventListener("pointerover", () => {
+	image.addEventListener("mouseover", () => {
 		imageHover.play();
 	});
-	image.addEventListener("pointerleave", () => {
+	image.addEventListener("mouseleave", () => {
 		imageHover.reverse();
 	});
 });

@@ -7,32 +7,34 @@
 }
 .work-content {
 	width: 100%;
-	display: flex;
-	flex-direction: column;
-	gap: g.$One;
+	display: grid;
+	gap: g.$Half;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .project-wrapper {
 	width: 100%;
+	min-width: 200px;
 	display: flex;
 	flex-direction: column;
-	background-color: c.$black;
+	//background-color: c.$white;
 	border-radius: g.$Corner;
 	overflow: hidden;
 }
 .dark {
-	background-color: c.$black;
+	background-color: c.$deepblack;
+	border: 1px solid rgba(255, 255, 255, 0.123);
 	.project-tittle {
 		h3 {
-			color: c.$white;
+			color: c.$gray;
 		}
 	}
 	.project-description {
 		p {
-			color: c.$white;
+			color: c.$gray;
 		}
 	}
 	.project-button {
-		background-color: c.$white;
+		background-color: c.$black;
 		color: c.$black;
 	}
 }
@@ -40,12 +42,17 @@
 	width: 100%;
 	height: 100%;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-end;
+	padding: g.$Half;
 	cursor: pointer;
+	will-change: transform;
 	img {
 		width: 100%;
+		max-height: 500px;
+		object-fit: contain;
+		border-radius: 1.28rem;
 	}
 }
 .project-info-wrapper {
@@ -54,12 +61,13 @@
 	flex-direction: row;
 	align-items: flex-start;
 	justify-content: space-between;
-	padding: g.$One * 2;
+	padding: g.$Double;
+	//background-color: c.$black;
 }
 @media only screen and (max-width: 600px) {
 	.project-info-wrapper {
-		padding: g.$One;
-		margin-bottom: 2rem;
+		padding: g.$Full;
+		//margin-bottom: 2rem;
 	}
 }
 .project-text-wrapper {
@@ -73,17 +81,4 @@
 .project-description {
 	overflow: hidden;
 	color: c.$black;
-}
-.project-button {
-	cursor: pointer;
-	padding-inline: g.$One * 2;
-	padding-block: g.$One;
-	border-radius: calc(g.$One / 1.5);
-	background-color: c.$black;
-	color: c.$white;
-	font-family: "Montreal", sans-serif;
-	font-variant-numeric: slashed-zero;
-	font-variant-ligatures: normal;
-	font-size: f.$b;
-	font-weight: 600;
 }

@@ -13,7 +13,10 @@
 	height: 101svh;
 	overflow: hidden;
 	background: c.$black;
-	z-index: 2;
+	//background-image: url(../img/E5401_06.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 4;
 	padding: g.$One;
 }
 #progress {
@@ -27,7 +30,7 @@
 	width: 100%;
 	max-width: 400px;
 	height: 5px;
-	background-color: #ffffff2a;
+	background-color: c.$deepblack;
 	overflow-x: hidden;
 	border-radius: 10px;
 }

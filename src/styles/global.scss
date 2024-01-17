@@ -1,8 +1,10 @@
 @use "./fonts.scss" as f;
 @use "./colors.scss" as c;
-
+$Full: 1rem;
 $One: 0.6rem;
-$Corner: 1rem;
+$Half: 0.3rem;
+$Double: 1.2rem;
+$Corner: 1.5rem;
 
 * {
 	box-sizing: border-box;
@@ -12,7 +14,7 @@ $Corner: 1rem;
 html,
 body {
 	scroll-behavior: initial;
-	background-color: black;
+	background-color: c.$black;
 }
 body {
 	width: 100%;
@@ -28,9 +30,9 @@ body::-webkit-scrollbar {
 }
 
 .container {
-	max-width: 1920px;
+	max-width: 1440px;
 	width: 100%;
-	padding-inline: $One;
+	padding-inline: $Half;
 	margin-inline: auto;
 }
 a {

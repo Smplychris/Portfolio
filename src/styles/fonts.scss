@@ -28,7 +28,8 @@
 }
 
 $h1: 11.089rem;
-$h2: 4.236rem;
+//$h2: 4.236rem;
+$h2: clamp(2rem, 8vw, 2.618rem);
 $h3: clamp(2rem, 8vw, 2.618rem);
 $h4: 1.618rem;
 $b: 1rem;
@@ -49,7 +50,7 @@ h2 {
 	font-variant-ligatures: normal;
 	font-weight: 600;
 	font-size: $h2;
-	letter-spacing: -2;
+	letter-spacing: -1;
 	line-height: 1.1;
 }
 h3 {

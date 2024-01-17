@@ -11,6 +11,9 @@ let loadPercent = 0;
 let allImgs = document.querySelectorAll("img").length;
 let progressCnt = document.getElementById("progress-count");
 let imgLoad = imagesLoaded("img");
+let allProjects = document.querySelectorAll(".project-wrapper");
+let heroText = document.querySelectorAll(".moving-text");
+let contacts = document.querySelectorAll(".contact-content-element");
 
 let tlProgress = gsap.timeline({
 	paused: true,
@@ -35,28 +38,26 @@ let tlProgress = gsap.timeline({
 			".progress-count-wrap",
 			{
 				yPercent: -60,
+				opacity: 0,
 			},
 			"-=1"
 		);
-		tlComplete.to(
+		tlComplete.set(
 			"#loading-container",
 			{
-				yPercent: -101,
-				ease: "power3.inOut",
+				autoAlpha: 0,
 			},
 			"-=0.8"
 		);
-		tlComplete.set("#loading-container", {
-			autoAlpha: 0,
-		});
 		tlComplete.from(
-			".moving-text",
+			[heroText, allProjects, contacts],
 			{
-				yPercent: 101,
-				stagger: 0.2,
-				ease: "expo.out",
+				opacity: 0,
+				y: 150,
+				stagger: 0.1,
+				clearProps: true,
 			},
-			"-=1"
+			"-=1.2"
 		);
 	},
 });
