@@ -46,6 +46,7 @@ projectHover.forEach((hover) => {
 	imageHover.to(image, {
 		filter: "blur(30px)",
 		duration: 0.5,
+		borderRadius: 100,
 	});
 	image.addEventListener("mouseover", () => {
 		imageHover.play();
