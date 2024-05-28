@@ -70,7 +70,7 @@ projectOpen.forEach((project) => {
 		},
 		onComplete: () => {
 			modal.start();
-			heroVideo.play();
+			//heroVideo.play();
 		},
 		onReverseComplete: () => {
 			modal.scrollTo(top, { immediate: true });
@@ -101,13 +101,13 @@ projectOpen.forEach((project) => {
 		close,
 		{
 			opacity: 0,
-			yPercent: 80,
-			scale: 0.9,
+			yPercent: 100,
+			scale: 0.8,
 			duration: 1,
 			ease: "power3.inOut",
 			filter: "blur(30px)",
 		},
-		"-=1.2"
+		"-=0.9"
 	);
 	open.addEventListener("click", () => {
 		opener.timeScale(1).play();
@@ -124,24 +124,31 @@ let videos = document.querySelectorAll(".video-wrapper").forEach((video) => {
 	let button = video.querySelector(".play-pause-button");
 	let playButton = button.querySelector("#play");
 	let pauseButton = button.querySelector("#pause");
-	gsap.set(playButton, {
+	gsap.set(pauseButton, {
 		scale: 0,
+		filter: "blur(12px)",
 	});
 	let playPause = gsap.timeline({
 		paused: true,
-		ease: "power2.inOut",
-	});
-	playPause.to(pauseButton, {
-		scale: 0,
-		duration: 0.1,
+		ease: "power1.inOut",
 	});
 	playPause.to(playButton, {
-		scale: 1,
-		duration: 0.1,
+		scale: 0,
+		duration: 0.2,
+		filter: "blur(12px)",
 	});
+	playPause.to(
+		pauseButton,
+		{
+			scale: 1,
+			duration: 0.2,
+			filter: "blur(0px)",
+		},
+		"-=0.1"
+	);
 
 	play.addEventListener("click", function (event) {
-		if (this.paused) this.play(), playPause.reverse();
-		else this.pause(), playPause.play();
+		if (this.paused) this.play(), playPause.play();
+		else this.pause(), playPause.reverse();
 	});
 });

@@ -15,7 +15,8 @@
 .contact-content-element {
 	width: 100%;
 	position: relative;
-	background-color: c.$deepblack;
+	//background-color: c.$deepblack;
+	background-color: #00000020;
 	border-radius: g.$Corner;
 	padding: g.$Double;
 	color: c.$gray;
@@ -29,11 +30,11 @@
 	border: 1px solid rgba(255, 255, 255, 0.123);
 	svg {
 		//stroke: c.$white;
-		fill: c.$white;
+		fill: #edff7b;
 		width: 62px;
 		position: relative;
 		z-index: 4;
-		opacity: 70%;
+		opacity: 90%;
 	}
 }
 .content-element-text {
@@ -61,11 +62,11 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(90deg, #091c19 0%, #335e57 98%);
+	background: linear-gradient(90deg, #091c19 0%, #335e5700 98%);
 }
 .blue {
 	background: linear-gradient(90deg, #0900ff 0%, #1a1a1a 99%);
 }
 .green {
-	background: linear-gradient(90deg, #fb3d3d 0%, #335e57 99%);
+	background: linear-gradient(90deg, #fb3d3d 0%, #335e572b 99%);
 }

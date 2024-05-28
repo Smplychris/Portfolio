@@ -12,7 +12,7 @@ hoverElement.forEach((element) => {
 	});
 	let hoverInEffect = gsap.timeline({
 		paused: true,
-		defaults: { duration: 0.4 },
+		defaults: { duration: 0.4, ease: "power1.inOut" },
 	});
 	hoverInEffect.to(swiper, {
 		xPercent: 0,
@@ -20,7 +20,7 @@ hoverElement.forEach((element) => {
 	hoverInEffect.to(
 		text,
 		{
-			color: "#ffffff",
+			color: "#edff7b",
 		},
 		"-=0.4"
 	);
@@ -29,8 +29,9 @@ hoverElement.forEach((element) => {
 		{
 			opacity: 0,
 			x: -20,
+			filter: "blur(12px)",
 		},
-		"-=0.2"
+		"-=0.3"
 	);
 	element.addEventListener("mouseover", () => {
 		hoverInEffect.play();
@@ -42,21 +43,32 @@ hoverElement.forEach((element) => {
 let projectHover = document.querySelectorAll(".project-wrapper");
 projectHover.forEach((hover) => {
 	let image = hover.querySelector(".project-image");
+	let projectText = hover.querySelector("h3");
 	let imageHover = gsap.timeline({ paused: true });
 	imageHover.to(image, {
 		filter: "blur(30px)",
-		duration: 0.3,
+		duration: 0.5,
 		ease: "power1.inOut",
 		//borderRadius: 100,
 	});
 	imageHover.to(
-		hover,
+		projectText,
 		{
-			backgroundColor: "#091C19",
-			duration: 0.3,
+			color: "#edff7b",
+			duration: 0.5,
 			ease: "power1.inOut",
 		},
-		"-=0.3"
+		"-=0.5"
+	);
+	imageHover.to(
+		hover,
+		{
+			color: "#edff7b",
+			backgroundColor: "#091C19",
+			duration: 0.5,
+			ease: "power1.inOut",
+		},
+		"-=0.5"
 	);
 	image.addEventListener("mouseover", () => {
 		imageHover.play();

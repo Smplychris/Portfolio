@@ -40,7 +40,7 @@
 	justify-content: center;
 	width: 100%;
 	height: 100%;
-	background-color: c.$white;
+	background-color: #edff7b;
 	transform: translateX(-100%);
 	//border-radius: 10px;
 }
@@ -48,7 +48,7 @@
 .progress-count-wrap {
 	margin: 20px;
 	text-align: center;
-	color: c.$white;
+	color: #edff7b;
 	font-size: 1rem;
 	font-family: "Montreal", sans-serif;
 }
@@ -56,7 +56,7 @@
 #progress-count {
 	margin: 10px;
 	font-size: 3rem;
-	color: c.$white;
+	color: #edff7b;
 	font-family: "Montreal", sans-serif;
 	font-variant-numeric: slashed-zero;
 }

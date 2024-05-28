@@ -42,14 +42,22 @@
 	flex-direction: row;
 	align-items: start;
 	justify-content: flex-start;
+	h2 {
+		font-weight: 600;
+		color: #edff7b;
+	}
 	h4 {
 		font-size: 16px;
+		font-weight: 700;
+		span {
+			font-weight: 400;
+		}
 	}
 }
 .legal {
 	max-width: 60ch;
 	text-justify: auto;
-	color: c.$gray;
+	color: c.$white;
 }
 .last {
 	//text-transform: uppercase;
@@ -66,4 +74,12 @@
 	text-transform: uppercase;
 	font-size: 12px;
 	font-weight: 600;
+}
+.rounded {
+	border: 1px solid c.$white;
+	border-radius: 50vw;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-bottom: 4px;
+	padding-top: 3px;
 }

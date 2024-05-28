@@ -41,6 +41,7 @@
 	flex-direction: column;
 	align-items: center;
 	gap: g.$Half;
+	display: none;
 }
 
 .project-modal-hero {
@@ -111,10 +112,11 @@
 	svg {
 		width: 32px;
 		cursor: pointer;
-		opacity: 50%;
+		//opacity: 50%;
+		opacity: 80%;
 	}
 	p {
-		color: c.$white;
+		color: #ff1515;
 		padding-left: g.$Half;
 		font-weight: 600;
 		font-size: 0.825rem;
