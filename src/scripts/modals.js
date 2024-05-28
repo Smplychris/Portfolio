@@ -57,11 +57,11 @@ projectOpen.forEach((project) => {
 
 	gsap.set(swiperTop, {
 		yPercent: -100,
-		opacity: 0,
+		opacity: 1,
 	});
 	gsap.set(swiperBottom, {
 		yPercent: 100,
-		opacity: 0,
+		opacity: 1,
 	});
 	let opener = gsap.timeline({
 		paused: true,
@@ -81,7 +81,7 @@ projectOpen.forEach((project) => {
 	});
 	opener.to([swiperTop, swiperBottom], {
 		yPercent: 0,
-		opacity: 1,
+		//opacity: 1,
 		ease: "power3.inOut",
 		duration: 1,
 	});
@@ -92,7 +92,7 @@ projectOpen.forEach((project) => {
 		opacity: 0,
 		y: 40,
 		scale: 0.9,
-		//filter: "blur(30px)",
+		filter: "blur(30px)",
 		duration: 1,
 		ease: "power3.inOut",
 		//stagger: 0.1,
@@ -105,7 +105,7 @@ projectOpen.forEach((project) => {
 			scale: 0.9,
 			duration: 1,
 			ease: "power3.inOut",
-			//filter: "blur(30px)",
+			filter: "blur(30px)",
 		},
 		"-=1.2"
 	);

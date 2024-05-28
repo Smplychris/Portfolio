@@ -20,7 +20,7 @@ hoverElement.forEach((element) => {
 	hoverInEffect.to(
 		text,
 		{
-			color: "#1a1a1a",
+			color: "#ffffff",
 		},
 		"-=0.4"
 	);
@@ -45,9 +45,19 @@ projectHover.forEach((hover) => {
 	let imageHover = gsap.timeline({ paused: true });
 	imageHover.to(image, {
 		filter: "blur(30px)",
-		duration: 0.5,
-		borderRadius: 100,
+		duration: 0.3,
+		ease: "power1.inOut",
+		//borderRadius: 100,
 	});
+	imageHover.to(
+		hover,
+		{
+			backgroundColor: "#091C19",
+			duration: 0.3,
+			ease: "power1.inOut",
+		},
+		"-=0.3"
+	);
 	image.addEventListener("mouseover", () => {
 		imageHover.play();
 	});
