@@ -14,12 +14,13 @@ $Corner: 1.5rem;
 html,
 body {
 	scroll-behavior: initial;
-	background-color: c.$black;
+	background-color: #335e57;
 }
 body {
 	width: 100%;
 	min-height: 100%;
 	height: auto;
+	background: linear-gradient(180deg, #091c19 0%, #335e57 98%);
 }
 body::-webkit-scrollbar {
 	display: none;

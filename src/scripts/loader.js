@@ -39,25 +39,27 @@ let tlProgress = gsap.timeline({
 			{
 				yPercent: -60,
 				opacity: 0,
+				filter: "blur(30px)",
 			},
 			"-=1"
 		);
-		tlComplete.set(
+		tlComplete.to(
 			"#loading-container",
 			{
 				autoAlpha: 0,
+				duration: 0.4,
 			},
-			"-=0.8"
+			"-=1.2"
 		);
 		tlComplete.from(
 			[heroText, allProjects, contacts],
 			{
 				opacity: 0,
 				y: 150,
-				stagger: 0.1,
+				stagger: 0.05,
 				clearProps: true,
 			},
-			"-=1.2"
+			"-=1.6"
 		);
 	},
 });
